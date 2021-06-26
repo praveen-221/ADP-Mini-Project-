@@ -3,8 +3,8 @@
 
     include("config.php");
 
-    $_SESSION["name"] = $_POST["name"];
-    $_SESSION["password"]  = $_POST["password"];
+    $name = $_POST["name"];
+    $password = $_POST["password"];
 
     $check_username = "";
     $check_password = "";
@@ -24,10 +24,10 @@
 
     while($row=mysqli_fetch_assoc($res)){
         $check_username=$row['name'];
-        $check_password=$row['password'];
+        $hashed_password=$row['password'];
     }
 
-    if($_POST["name"] == $check_username &&  $_POST["password"] == $check_password){
+    if($name == $check_username &&  password_verify($password,$hashed_password)){
         header("location: app.html");
     } else{
         $_SESSION["error"] = "Invalid Credentials !";
