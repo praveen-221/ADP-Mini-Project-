@@ -96,3 +96,24 @@ li a:hover:not(.active) {
 .active {
     background-color: #21c465;
 }
+
+#error {
+    width: 70%;
+    margin: auto;
+    background: rgb(231, 212, 100);
+    padding: 3px 5px;
+    color: rgb(165, 66, 0);
+    border-radius: 20px;
+    animation-name: error;
+    animation-duration: 1s;
+}
+
+@keyframes error {
+    from {
+        opacity: 0;
+        top: 20px;
+    }
+    to {
+        opacity: 1;
+    }
+}
