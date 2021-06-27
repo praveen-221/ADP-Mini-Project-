@@ -1,12 +1,13 @@
 body {
     margin: 0;
     padding: 0;
+    width: 100vw;
     background: #2e4358;
     font-family: sans-serif;
 }
 
 .box {
-    width: 300px;
+    width: min(300px,90%);
     padding: 40px;
     position: absolute;
     top: 50%;
@@ -111,7 +112,6 @@ li a:hover:not(.active) {
 @keyframes error {
     from {
         opacity: 0;
-        top: 20px;
     }
     to {
         opacity: 1;

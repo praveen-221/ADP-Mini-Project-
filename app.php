@@ -1,3 +1,12 @@
+<?php 
+    session_start();
+
+    if($_SESSION["loggedin"] != "true") {
+        $_SESSION["error"] = "Login into your account";
+        header("location: login.php");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>

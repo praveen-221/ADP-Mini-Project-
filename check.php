@@ -28,7 +28,8 @@
     }
 
     if($name == $check_username &&  password_verify($password,$hashed_password)){
-        header("location: app.html");
+        $_SESSION["loggedin"] = "true";
+        header("location: app.php");
     } else{
         $_SESSION["error"] = "Invalid Credentials !";
         header("location: login.php");

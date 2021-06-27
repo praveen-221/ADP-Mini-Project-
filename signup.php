@@ -45,7 +45,9 @@
         exit();
     }
 
-    include("app.html");
+
+    $_SESSION["loggedin"] = "true";
+    header("location: app.php");
     
     mysqli_close($conn);
 ?>
