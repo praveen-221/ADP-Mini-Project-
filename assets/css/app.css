@@ -5,7 +5,7 @@
 }
 
 body {
-    background-image: url("images/background.jfif");
+    background-image: url("../../images/background.jfif");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -103,6 +103,25 @@ hr {
     text-align: right;
     font-size: 1.1rem;
     text-shadow: 1.5px 1.5px 1px black;
+}
+
+.footer {
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logout {
+    padding: 0.7em 1.3em;
+    background-color: #1e2227;
+    color: rgb(207, 207, 207);
+    font-family: "Lucida Snas Unicode","Lucida Granade",sans-serif;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 640px){

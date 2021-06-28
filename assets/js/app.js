@@ -43,7 +43,7 @@ function status(response) {
 
 function changeWeather(weatherAPI){
     const body = document.querySelector("body");
-    body.style.backgroundImage = `url("images/${weatherAPI.weather[0].main}.jpg")`;
+    body.style.backgroundImage = `url("/ADP-Mini-Project-/images/${weatherAPI.weather[0].main}.jpg")`;
 
     document.querySelector(".weather-container").style.visibility = "visible";
 
@@ -60,3 +60,8 @@ function changeWeather(weatherAPI){
     humidity.textContent = `Humidity levels at ${Math.round(weatherAPI.main.humidity)}%`;
 }
 
+// for logout
+
+document.getElementById("logout").addEventListener("click",function() {
+    window.location.href = "/ADP-Mini-Project-/server/logout.php";
+})

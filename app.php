@@ -1,6 +1,5 @@
 <?php 
     session_start();
-
     if($_SESSION["loggedin"] != "true") {
         $_SESSION["error"] = "Login into your account";
         header("location: login.php");
@@ -13,7 +12,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="app.css">
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="assets/css/app.css">
         <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
         <title>Weather App</title>
     </head>
@@ -37,6 +37,9 @@
                 <div class="bottom-details" id="humidity">Humidity levels at 57%</div>
             </div>
         </div>
-        <script src="app.js"></script>
+        <div class="footer">
+            <button id="logout" class="logout">Logout</button>
+        </div>
+        <script src="assets/js/app.js"></script>
     </body>
 </html>

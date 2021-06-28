@@ -29,10 +29,10 @@
 
     if($name == $check_username &&  password_verify($password,$hashed_password)){
         $_SESSION["loggedin"] = "true";
-        header("location: app.php");
+        header("location: ../app.php");
     } else{
         $_SESSION["error"] = "Invalid Credentials !";
-        header("location: login.php");
+        header("location: ../login.php");
     }
 
     mysqli_close($conn);
