@@ -14,6 +14,7 @@ body {
     background-position: center;
     background-attachment: fixed;
     font-family: "Lobster", cursive;
+    overflow: hidden;
 }
 
 img {
