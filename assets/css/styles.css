@@ -56,6 +56,16 @@ form {
     font-family: "Heebo",sans-serif;
     opacity: 0.8;
 }
+#text-second input{ /* space for pass-check icon */
+    width: 70%;
+}
+#pass-check {  /* for password check icon */
+    position: absolute;
+    top: 70%;
+    right: 3px;
+    transform: translateY(-70%);
+    cursor: pointer;
+}
 .text label {
     position: absolute;
     top: 50%;
@@ -65,7 +75,7 @@ form {
     pointer-events: none;
     transition: .5s;
 }
-.text span::before {  /*for line below input field */
+.text #line::before {  /*for line below input field */
     content: '';
     position: absolute;
     top: 55px;
@@ -80,8 +90,8 @@ form {
     top: -1px;
     color: #108adb;
 }
-.text input:focus ~ span::before,
-.text input:valid ~ span::before{
+.text input:focus ~ #line::before,
+.text input:valid ~ #line::before{
     background: #108adb;
 }
 input[type="submit"]{
@@ -121,6 +131,10 @@ svg {
     animation-name: error;
     animation-duration: 1s;
     text-align: center;
+}
+
+.hide {
+    display: none;
 }
 
 @keyframes error {

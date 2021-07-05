@@ -1,4 +1,4 @@
-const apiKey = "your_api_key";
+const apiKey = "f096450d2ffd91d06e9125c75fa412e5";
 let cityInput = document.querySelector(".search-text");
 let cityHeader = document.querySelector(".city-header");
 let temperature = document.querySelector(".temperature");
@@ -34,16 +34,9 @@ function serverRequest(city){
     });
 }
 
-function status(response) {   
-    if(response.ok) {
-        return response;
-    }
-    return response.json().then(res => Promise.reject(res));
-}
-
 function changeWeather(weatherAPI){
     const body = document.querySelector("body");
-    body.style.backgroundImage = `url("/ADP-Mini-Project-/images/${weatherAPI.weather[0].main}.jpg")`;
+    body.style.backgroundImage = `url("/weather-app/images/${weatherAPI.weather[0].main}.jpg")`;
 
     document.querySelector(".weather-container").style.visibility = "visible";
 
@@ -63,5 +56,5 @@ function changeWeather(weatherAPI){
 // for logout
 
 document.getElementById("logout").addEventListener("click",function() {
-    window.location.href = "/ADP-Mini-Project-/server/logout.php";
+    window.location.href = "/weather-app/server/logout.php";
 })

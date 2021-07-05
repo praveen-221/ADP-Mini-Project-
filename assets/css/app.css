@@ -66,12 +66,14 @@ body {
 
 .weather-description {
     padding: 50px;
+    text-align: center;
 }
 
 .weather-description .city-header {
     text-align: center;
     font-size: 2.6rem;
     font-family: "Lucida Snas Unicode","Lucida Granade",sans-serif;
+    margin-bottom: 0.6em;
 }
 
 .weather-main{

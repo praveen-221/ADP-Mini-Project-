@@ -13,7 +13,8 @@
     $db = "weatherDB";
     $conn = mysqli_connect($server,$username,$pass,$db);
     if(!$conn) {
-        echo "Error while connecting : ",mysqli_error($conn);
+        $_SESSION["error"] = "Create your account !";
+        header("location: ../login.php");
         exit();
     }
 
