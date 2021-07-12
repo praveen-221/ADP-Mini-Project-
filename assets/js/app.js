@@ -1,4 +1,4 @@
-const apiKey = "f096450d2ffd91d06e9125c75fa412e5";
+const apiKey = "your_api_key";
 let cityInput = document.querySelector(".search-text");
 let cityHeader = document.querySelector(".city-header");
 let temperature = document.querySelector(".temperature");
