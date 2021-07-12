@@ -35,6 +35,24 @@ function serverRequest(city){
 }
 
 function changeWeather(weatherAPI){
+    const lattitude = weatherAPI.coord.lat;
+    const longitude = weatherAPI.coord.lon;
+    console.log(lattitude,longitude);
+
+    mapboxgl.accessToken = 'your_api_key';
+
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center : [longitude,lattitude],
+        zoom : 12
+    });
+
+    var marker = new mapboxgl.Marker()
+    .setLngLat([longitude,lattitude]) 
+    .addTo(map);
+
+
     const body = document.querySelector("body");
     body.style.backgroundImage = `url("/weather-app/images/${weatherAPI.weather[0].main}.jpg")`;
 
