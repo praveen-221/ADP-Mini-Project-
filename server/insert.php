@@ -28,26 +28,28 @@
     // creating table
     $sql2 = "CREATE TABLE IF NOT EXISTS users (
         id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
-        name VARCHAR(50) NOT NULL,
+        name VARCHAR(50) NOT NULL UNIQUE,
         password VARCHAR(200) NOT NULL
     )";
     if(!mysqli_query($conn,$sql2)) {
         echo "Error while creating table : ",mysqli_error($conn);
         exit();
     }
+   
+    // inserting values
+    $hashed_password = password_hash($password, PASSWORD_DEFAULT); 
 
-    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-
-    // inserting values 
     $sql3 = "INSERT INTO users (name,password) VALUES('$name','$hashed_password')";
-    if(!mysqli_query($conn,$sql3)) {
-        echo "Error while inserting values : ",mysqli_error($conn);
+    if(!mysqli_query($conn,$sql3)) {   // if username already exists
+        $_SESSION["error"] = "Try a different username!";
+        header("location: ../signup.php");
         exit();
     }
 
-
     $_SESSION["loggedin"] = "true";
     header("location: ../app.php");
+ 
     
     mysqli_close($conn);
 ?>
+

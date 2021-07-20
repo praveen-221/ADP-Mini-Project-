@@ -58,7 +58,7 @@
                 </div>
 
                 <div class="redirect">
-                    <pre>Don't have an account? <a href="signup.html">Sign Up</a></pre>
+                    <pre>Don't have an account? <a href="signup.php">Sign Up</a></pre>
                 </div>
             </form>        
         </div>
